@@ -4,7 +4,7 @@
 #
 Name     : R-dplyr
 Version  : 0.7.4
-Release  : 2
+Release  : 3
 URL      : https://cran.r-project.org/src/contrib/dplyr_0.7.4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/dplyr_0.7.4.tar.gz
 Summary  : A Grammar of Data Manipulation
@@ -15,26 +15,20 @@ Requires: R-BH
 Requires: R-Rcpp
 Requires: R-assertthat
 Requires: R-bindrcpp
-Requires: R-ggplot2
 Requires: R-glue
-Requires: R-nycflights13
 Requires: R-pkgconfig
 Requires: R-plogr
 Requires: R-rlang
 Requires: R-tibble
-Requires: R-withr
 BuildRequires : R-BH
 BuildRequires : R-Rcpp
 BuildRequires : R-assertthat
 BuildRequires : R-bindrcpp
-BuildRequires : R-ggplot2
 BuildRequires : R-glue
-BuildRequires : R-nycflights13
 BuildRequires : R-pkgconfig
 BuildRequires : R-plogr
 BuildRequires : R-rlang
 BuildRequires : R-tibble
-BuildRequires : R-withr
 BuildRequires : clr-R-helpers
 
 %description
@@ -56,11 +50,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1509039098
+export SOURCE_DATE_EPOCH=1509039480
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1509039098
+export SOURCE_DATE_EPOCH=1509039480
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -84,15 +78,6 @@ echo "CXXFLAGS = $CXXFLAGS -ftree-vectorize " >> ~/.R/Makevars
 R CMD INSTALL --preclean --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} --build  -l %{buildroot}/usr/lib64/R/library dplyr
 cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
-%check
-export LANG=C
-export http_proxy=http://127.0.0.1:9/
-export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost,127.0.0.1,0.0.0.0
-export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library dplyr|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
-
 
 %files
 %defattr(-,root,root,-)
@@ -263,7 +248,72 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/dplyr/include/tools/tools.h
 /usr/lib64/R/library/dplyr/include/tools/utils.h
 /usr/lib64/R/library/dplyr/include/tools/wrap_subset.h
-/usr/lib64/R/library/dplyr/libs/symbols.rds
+/usr/lib64/R/library/dplyr/tests/testthat.R
+/usr/lib64/R/library/dplyr/tests/testthat/helper-astyle.R
+/usr/lib64/R/library/dplyr/tests/testthat/helper-combine.R
+/usr/lib64/R/library/dplyr/tests/testthat/helper-encoding.R
+/usr/lib64/R/library/dplyr/tests/testthat/helper-groups.R
+/usr/lib64/R/library/dplyr/tests/testthat/helper-hybrid.R
+/usr/lib64/R/library/dplyr/tests/testthat/helper-torture.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-DBI.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-arrange.r
+/usr/lib64/R/library/dplyr/tests/testthat/test-astyle.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-between.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-binds.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-case-when.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-coalesce.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-colwise-arrange.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-colwise-filter.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-colwise-group-by.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-colwise-mutate.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-colwise-select.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-combine.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-copy_to.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-copying.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-count-tally.r
+/usr/lib64/R/library/dplyr/tests/testthat/test-data_frame.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-distinct.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-do.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-equality.r
+/usr/lib64/R/library/dplyr/tests/testthat/test-filter.r
+/usr/lib64/R/library/dplyr/tests/testthat/test-funs-predicates.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-funs.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-group-by.r
+/usr/lib64/R/library/dplyr/tests/testthat/test-group-indices.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-group-size.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-hybrid-traverse.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-hybrid.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-if-else.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-internals.r
+/usr/lib64/R/library/dplyr/tests/testthat/test-joins.r
+/usr/lib64/R/library/dplyr/tests/testthat/test-lazyeval-compat.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-lead-lag.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-mutate-windowed.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-mutate.r
+/usr/lib64/R/library/dplyr/tests/testthat/test-n_distinct.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-na-if.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-near.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-nth-value.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-overscope.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-pull.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-rank.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-rbind.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-recode.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-sample.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-select-helpers.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-select.r
+/usr/lib64/R/library/dplyr/tests/testthat/test-sets.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-slice.r
+/usr/lib64/R/library/dplyr/tests/testthat/test-summarise.r
+/usr/lib64/R/library/dplyr/tests/testthat/test-tbl-cube.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-tbl.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-top-n.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-ts.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-underscore.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-union-all.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-utils.R
+/usr/lib64/R/library/dplyr/tests/testthat/test-window.R
+/usr/lib64/R/library/dplyr/tests/testthat/utf-8.R
 
 %files lib
 %defattr(-,root,root,-)

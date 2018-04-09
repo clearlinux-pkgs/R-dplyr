@@ -1,2 +1,23 @@
 # This file contains recursive sources that require this package
+R-Lahman
+R-VIM
+R-bayesplot
+R-brms
+R-broom
+R-caret
+R-dbplyr
+R-ggjoy
+R-ggridges
+R-klaR
+R-labelled
+R-modelr
+R-mvoutlier
+R-plotly
+R-questionr
+R-recipes
+R-robCompositions
+R-rstanarm
+R-shinystan
+R-tidyr
 R-tidyselect
+R-tidyverse

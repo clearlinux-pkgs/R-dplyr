@@ -1,7 +1,6 @@
 # This file contains recursive sources that require this package
 R-AmesHousing
 R-Lahman
-R-VIM
 R-adegenet
 R-bayesplot
 R-broom
@@ -13,5 +12,6 @@ R-plotly
 R-recipes
 R-solrium
 R-styler
+R-tibble
 R-tidyr
 R-tidyselect

@@ -2,7 +2,9 @@
 R-BH
 R-bindrcpp
 R-glue
+R-pillar
 R-pkgconfig
 R-plogr
+R-purrr
 R-tibble
 R-tidyselect

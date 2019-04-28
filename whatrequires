@@ -1,6 +1,8 @@
 # This file contains recursive sources that require this package
 R-AmesHousing
 R-Lahman
+R-RNeXML
+R-SGP
 R-adegenet
 R-bayesplot
 R-broom
@@ -8,8 +10,14 @@ R-ggridges
 R-ggvis
 R-janitor
 R-labelled
+R-phylobase
 R-plotly
+R-princurve
 R-recipes
+R-ritis
+R-rsample
+R-rstanarm
+R-shinystan
 R-solrium
 R-styler
 R-tibble

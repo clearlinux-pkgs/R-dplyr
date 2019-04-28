@@ -8,8 +8,10 @@ R-bayesplot
 R-broom
 R-ggridges
 R-ggvis
+R-htmlTable
 R-janitor
 R-labelled
+R-modelr
 R-phylobase
 R-plotly
 R-princurve

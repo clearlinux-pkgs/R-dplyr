@@ -4,15 +4,13 @@
 #
 Name     : R-dplyr
 Version  : 0.8.0.1
-Release  : 30
+Release  : 31
 URL      : https://cran.r-project.org/src/contrib/dplyr_0.8.0.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/dplyr_0.8.0.1.tar.gz
 Summary  : A fast, consistent tool for working with data frame like objects.
 Group    : Development/Tools
 License  : MIT
 Requires: R-dplyr-lib = %{version}-%{release}
-Requires: R-pillar
-Requires: R-purrr
 BuildRequires : R-BH
 BuildRequires : R-bindrcpp
 BuildRequires : R-glue
@@ -43,10 +41,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1556472791
+export SOURCE_DATE_EPOCH=1556484261
 
 %install
-export SOURCE_DATE_EPOCH=1556472791
+export SOURCE_DATE_EPOCH=1556484261
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "

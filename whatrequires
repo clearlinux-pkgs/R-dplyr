@@ -5,7 +5,10 @@ R-RNeXML
 R-SGP
 R-adegenet
 R-bayesplot
+R-brms
 R-broom
+R-dbplyr
+R-dtplyr
 R-ggridges
 R-ggvis
 R-htmlTable
@@ -25,3 +28,4 @@ R-styler
 R-tibble
 R-tidyr
 R-tidyselect
+R-tidyverse

@@ -7,7 +7,6 @@ R-adegenet
 R-bayesplot
 R-brms
 R-broom
-R-dbplyr
 R-dtplyr
 R-ggridges
 R-ggvis
@@ -17,11 +16,11 @@ R-labelled
 R-modelr
 R-phylobase
 R-plotly
-R-princurve
 R-recipes
 R-ritis
 R-rsample
 R-rstanarm
+R-sf
 R-shinystan
 R-solrium
 R-styler

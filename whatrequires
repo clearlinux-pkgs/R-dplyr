@@ -2,13 +2,11 @@
 R-AmesHousing
 R-Lahman
 R-RNeXML
-R-SGP
 R-adegenet
 R-bayesplot
 R-brms
 R-broom
 R-dtplyr
-R-ggridges
 R-ggvis
 R-htmlTable
 R-janitor
@@ -20,10 +18,8 @@ R-recipes
 R-ritis
 R-rsample
 R-rstanarm
-R-sf
 R-shinystan
 R-solrium
-R-styler
 R-tibble
 R-tidyr
 R-tidyselect

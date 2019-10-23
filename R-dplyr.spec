@@ -4,21 +4,19 @@
 #
 Name     : R-dplyr
 Version  : 0.8.3
-Release  : 36
+Release  : 37
 URL      : https://cran.r-project.org/src/contrib/dplyr_0.8.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/dplyr_0.8.3.tar.gz
 Summary  : A fast, consistent tool for working with data frame like objects.
 Group    : Development/Tools
 License  : MIT
 Requires: R-dplyr-lib = %{version}-%{release}
-Requires: R-BH
 Requires: R-R6
 Requires: R-Rcpp
 Requires: R-assertthat
 Requires: R-glue
 Requires: R-magrittr
 Requires: R-pkgconfig
-Requires: R-plogr
 Requires: R-rlang
 Requires: R-tibble
 Requires: R-tidyselect
@@ -26,14 +24,18 @@ BuildRequires : R-BH
 BuildRequires : R-R6
 BuildRequires : R-Rcpp
 BuildRequires : R-assertthat
+BuildRequires : R-bindrcpp
 BuildRequires : R-glue
 BuildRequires : R-magrittr
+BuildRequires : R-pillar
 BuildRequires : R-pkgconfig
 BuildRequires : R-plogr
+BuildRequires : R-purrr
 BuildRequires : R-rlang
 BuildRequires : R-tibble
 BuildRequires : R-tidyselect
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 # dplyr <a href='https://dplyr.tidyverse.org'><img src='man/figures/logo.png' align="right" height="139" /></a>
@@ -54,10 +56,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1562311527
+export SOURCE_DATE_EPOCH=1571820336
 
 %install
-export SOURCE_DATE_EPOCH=1562311527
+export SOURCE_DATE_EPOCH=1571820336
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "

@@ -4,7 +4,7 @@
 #
 Name     : R-dplyr
 Version  : 0.8.3
-Release  : 38
+Release  : 39
 URL      : https://cran.r-project.org/src/contrib/dplyr_0.8.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/dplyr_0.8.3.tar.gz
 Summary  : A fast, consistent tool for working with data frame like objects.

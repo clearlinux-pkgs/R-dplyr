@@ -4,7 +4,7 @@
 #
 Name     : R-dplyr
 Version  : 0.8.5
-Release  : 41
+Release  : 42
 URL      : https://cran.r-project.org/src/contrib/dplyr_0.8.5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/dplyr_0.8.5.tar.gz
 Summary  : A Grammar of Data Manipulation

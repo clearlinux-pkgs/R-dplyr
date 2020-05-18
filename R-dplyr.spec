@@ -4,7 +4,7 @@
 #
 Name     : R-dplyr
 Version  : 0.8.5
-Release  : 42
+Release  : 43
 URL      : https://cran.r-project.org/src/contrib/dplyr_0.8.5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/dplyr_0.8.5.tar.gz
 Summary  : A Grammar of Data Manipulation
@@ -38,7 +38,7 @@ BuildRequires : R-tidyselect
 BuildRequires : buildreq-R
 
 %description
-# dplyr <a href='https://dplyr.tidyverse.org'><img src='man/figures/logo.png' align="right" height="139" /></a>
+both in memory and out of memory.
 
 %package lib
 Summary: lib components for the R-dplyr package.
@@ -50,21 +50,22 @@ lib components for the R-dplyr package.
 
 %prep
 %setup -q -c -n dplyr
+cd %{_builddir}/dplyr
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583771045
+export SOURCE_DATE_EPOCH=1589774194
 
 %install
-export SOURCE_DATE_EPOCH=1583771045
+export SOURCE_DATE_EPOCH=1589774194
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib

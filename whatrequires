@@ -7,14 +7,16 @@ R-bayesplot
 R-broom
 R-dbplyr
 R-dtplyr
+R-forcats
+R-ggridges
 R-ggvis
 R-janitor
 R-labelled
-R-modelr
 R-plotly
 R-recipes
 R-rex
 R-rsample
 R-solrium
+R-styler
 R-tidyr
 R-tidyverse

@@ -1,5 +1,6 @@
 # This file contains recursive sources that require this package
 R-AmesHousing
+R-GGally
 R-Lahman
 R-RNeXML
 R-adegenet
@@ -12,10 +13,14 @@ R-ggridges
 R-ggvis
 R-janitor
 R-labelled
+R-mice
+R-pbkrtest
 R-plotly
+R-projpred
 R-recipes
 R-rex
 R-rsample
+R-slider
 R-solrium
 R-styler
 R-tidyr

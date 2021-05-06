@@ -1,5 +1,6 @@
 # This file contains recursive sources that require this package
 R-AmesHousing
+R-DiagrammeR
 R-GGally
 R-Lahman
 R-RNeXML

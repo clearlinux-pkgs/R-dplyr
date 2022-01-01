@@ -1,6 +1,5 @@
 # This file contains recursive sources that require this package
 R-AmesHousing
-R-Cubist
 R-DiagrammeR
 R-GGally
 R-Lahman
@@ -12,9 +11,9 @@ R-bayesplot
 R-broom
 R-dbplyr
 R-dtplyr
-R-eddington
 R-flexsurv
 R-forcats
+R-ggfortify
 R-ggridges
 R-ggvis
 R-htmlTable
@@ -22,14 +21,12 @@ R-janitor
 R-labelled
 R-mice
 R-pbkrtest
-R-pillar
 R-plotly
 R-projpred
 R-recipes
-R-rex
 R-rsample
 R-slider
 R-solrium
-R-styler
+R-themis
 R-tidyr
 R-tidyverse

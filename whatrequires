@@ -13,13 +13,14 @@ R-broom.mixed
 R-dbplyr
 R-dtplyr
 R-flexsurv
-R-forcats
+R-fontawesome
 R-ggfortify
 R-ggridges
 R-ggvis
 R-janitor
 R-labelled
 R-mice
+R-modeldata
 R-pbkrtest
 R-plotly
 R-posterior

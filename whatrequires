@@ -15,7 +15,6 @@ R-dtplyr
 R-flexsurv
 R-fontawesome
 R-ggfortify
-R-ggridges
 R-ggvis
 R-janitor
 R-labelled
@@ -25,10 +24,10 @@ R-pbkrtest
 R-plotly
 R-posterior
 R-projpred
+R-reactable
 R-readODS
 R-recipes
 R-rsample
-R-slider
 R-solrium
 R-themis
 R-tidyr

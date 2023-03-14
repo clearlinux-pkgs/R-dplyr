@@ -10,6 +10,7 @@ R-adegenet
 R-bayesplot
 R-broom
 R-broom.mixed
+R-conflicted
 R-dbplyr
 R-dtplyr
 R-flexsurv
@@ -22,7 +23,6 @@ R-mice
 R-modeldata
 R-pbkrtest
 R-plotly
-R-posterior
 R-projpred
 R-reactable
 R-readODS
@@ -33,3 +33,4 @@ R-themis
 R-tidyr
 R-tidyrules
 R-tidyverse
+R-vcdExtra

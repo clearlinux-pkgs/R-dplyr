@@ -4,7 +4,7 @@
 #
 Name     : R-dplyr
 Version  : 1.1.0
-Release  : 73
+Release  : 74
 URL      : https://cran.r-project.org/src/contrib/dplyr_1.1.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/dplyr_1.1.0.tar.gz
 Summary  : A Grammar of Data Manipulation
@@ -34,9 +34,6 @@ BuildRequires : R-tibble
 BuildRequires : R-tidyselect
 BuildRequires : R-vctrs
 BuildRequires : buildreq-R
-# Suppress stripping binaries
-%define __strip /bin/true
-%define debug_package %{nil}
 
 %description
 objects, both in memory and out of memory.
@@ -58,10 +55,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1675097650
+export SOURCE_DATE_EPOCH=1678816216
 
 %install
-export SOURCE_DATE_EPOCH=1675097650
+export SOURCE_DATE_EPOCH=1678816216
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "

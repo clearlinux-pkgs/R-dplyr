@@ -12,6 +12,7 @@ R-broom
 R-broom.mixed
 R-conflicted
 R-dbplyr
+R-dials
 R-dtplyr
 R-flexsurv
 R-fontawesome
@@ -23,7 +24,6 @@ R-mice
 R-modeldata
 R-pbkrtest
 R-plotly
-R-projpred
 R-reactable
 R-readODS
 R-recipes

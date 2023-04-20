@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-dplyr
-Version  : 1.1.1
-Release  : 76
-URL      : https://cran.r-project.org/src/contrib/dplyr_1.1.1.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/dplyr_1.1.1.tar.gz
+Version  : 1.1.2
+Release  : 77
+URL      : https://cran.r-project.org/src/contrib/dplyr_1.1.2.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/dplyr_1.1.2.tar.gz
 Summary  : A Grammar of Data Manipulation
 Group    : Development/Tools
 License  : MIT
@@ -49,17 +49,16 @@ lib components for the R-dplyr package.
 
 %prep
 %setup -q -n dplyr
-cd %{_builddir}/dplyr
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1679503625
+export SOURCE_DATE_EPOCH=1682012956
 
 %install
-export SOURCE_DATE_EPOCH=1679503625
+export SOURCE_DATE_EPOCH=1682012956
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "

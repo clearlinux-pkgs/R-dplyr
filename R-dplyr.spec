@@ -5,7 +5,7 @@
 #
 Name     : R-dplyr
 Version  : 1.1.2
-Release  : 77
+Release  : 78
 URL      : https://cran.r-project.org/src/contrib/dplyr_1.1.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/dplyr_1.1.2.tar.gz
 Summary  : A Grammar of Data Manipulation

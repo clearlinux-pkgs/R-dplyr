@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-dplyr
-Version  : 1.1.2
-Release  : 79
-URL      : https://cran.r-project.org/src/contrib/dplyr_1.1.2.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/dplyr_1.1.2.tar.gz
+Version  : 1.1.3
+Release  : 80
+URL      : https://cran.r-project.org/src/contrib/dplyr_1.1.3.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/dplyr_1.1.3.tar.gz
 Summary  : A Grammar of Data Manipulation
 Group    : Development/Tools
 License  : MIT
@@ -49,16 +49,19 @@ lib components for the R-dplyr package.
 
 %prep
 %setup -q -n dplyr
+pushd ..
+cp -a dplyr buildavx2
+popd
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1682012956
+export SOURCE_DATE_EPOCH=1693936434
 
 %install
-export SOURCE_DATE_EPOCH=1682012956
+export SOURCE_DATE_EPOCH=1693936434
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -88,6 +91,7 @@ echo "CXXFLAGS = $CXXFLAGS -ftree-vectorize " >> ~/.R/Makevars
 R CMD INSTALL --preclean --use-LTO --install-tests --data-compress=none --compress=none --built-timestamp=${SOURCE_DATE_EPOCH} --build  -l %{buildroot}/usr/lib64/R/library .
 cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
+/usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot} %{buildroot}/usr/share/clear/filemap/filemap-%{name}
 
 %files
 %defattr(-,root,root,-)
@@ -181,6 +185,7 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/dplyr/tests/testthat/_snaps/deprec-dbi.md
 /usr/lib64/R/library/dplyr/tests/testthat/_snaps/deprec-do.md
 /usr/lib64/R/library/dplyr/tests/testthat/_snaps/deprec-funs.md
+/usr/lib64/R/library/dplyr/tests/testthat/_snaps/deprec-lazyeval.md
 /usr/lib64/R/library/dplyr/tests/testthat/_snaps/deprec-src-local.md
 /usr/lib64/R/library/dplyr/tests/testthat/_snaps/desc.md
 /usr/lib64/R/library/dplyr/tests/testthat/_snaps/distinct.md
